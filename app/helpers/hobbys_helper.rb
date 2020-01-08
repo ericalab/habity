@@ -1,0 +1,2 @@
+module HobbysHelper
+end
