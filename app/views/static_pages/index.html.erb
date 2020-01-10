@@ -1,0 +1,20 @@
+<% provide(:title, "Home") %>
+
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
+    <h1 class="text-black">Habity</h1>
+    <h2 class="text-black">Let's log what you did today!</h2>
+    <div class="row">
+      <div class='col-md-8 mx-auto'>
+        <div class='row'>
+          <div class='col-md-6'>
+            <%= link_to 'Sign up', new_user_path, class: 'btn w-100 btn-white m-3' %>
+          </div>
+          <div class="col-md-6">
+             <%= link_to 'Log in', login_path, class: 'btn w-100 btn-white m-3' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

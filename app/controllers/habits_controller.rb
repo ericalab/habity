@@ -1,6 +1,6 @@
 class HabitsController < ApplicationController
 
-  def show
+  def index
   end
   
 end

@@ -1,53 +1,46 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-/* universal */
-
-body {
-  padding-top: 60px;
+h1, h2 {
+  font-weight: 100;
 }
 
-section {
-  overflow: auto;
+.text-white {
+  color: #44c2c9;
 }
 
-textarea {
-  resize: vertical;
+.btn-white {
+  color: #44c2c9;
+  border: 2px solid #44c2c9;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+  margin-bottom: 20px;
+  
+  &:hover {
+    color: #fff;
+  }
 }
 
-.center {
-  text-align: center;
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('bg-top.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: ffffacd;
 }
 
-.center h1 {
-  margin-bottom: 10px;
-}
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: #777;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+.top-hero-container {
+  padding-top: 220px;
+  h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 60px;
+  }
 }
 
 .form-control {
@@ -62,7 +55,7 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
+  background-color: ffffacd;
 
   .users-new-container {
     padding-top: 220px;
@@ -78,4 +71,26 @@ p {
   position: fixed;
   width: 100%;
   z-index: 10000;
+}
+
+/* navbar */
+
+.navbar-transparent {
+  margin-bottom: 0px;
+  background-color: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important;
+  }
+
+.navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+
+img {
+    height: 10px;
+  }
+}
+.nav > li > a > img {
+  width:15%;
 }
