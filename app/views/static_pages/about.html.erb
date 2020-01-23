@@ -1,0 +1,30 @@
+<% provide(:title, "About") %>
+
+<div class="top-hero-wrapper text-center">
+  <div class="container top-hero-container">
+    <h1 class="text-black">How to use Habity</h1>
+    <h1 class="text-black">Habit</h1>
+    <h2 class="text-black">1,Add a task for your new habit</h2>
+    <h2 class="text-black">2,Qulick the cat when it has done! </h2>
+    <h2 class="text-black">- We will count how many days you achieved </h2>
+    
+    <h1 class="text-black">Hobby</h1>
+    <h2 class="text-black">1, Choose a category (Movie, Book, Music..)</h2>
+    <h2 class="text-black">2, log what you watched/read/listen with a short note </h2>
+
+    
+    
+    <div class="row">
+      <div class='col-md-8 mx-auto'>
+        <div class='row'>
+          <div class='col-md-6'>
+            <%= link_to 'Sign up', new_user_path, class: 'btn w-100 btn-white m-3' %>
+          </div>
+          <div class="col-md-6">
+             <%= link_to 'Log in', login_path, class: 'btn w-100 btn-white m-3' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

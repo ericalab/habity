@@ -1,29 +1,37 @@
-<div class="users-new-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-offset-4 mx-auto.d-block users-new-container">
-        <h1 class="text-center text-black">Sign up</h1>
-        <%= form_for @user do |f| %>
-          <div class="form-group">
-            <%= f.label :name, class: 'text-black' %>
-            <%= f.text_field :name, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :email, class: 'text-black' %>
-            <%= f.text_field :email, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password, class: 'text-black' %>
-            <%= f.password_field :password, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password_confirmation, class: 'text-black' %>
-            <%= f.password_field :password_confirmation, class: 'form-control' %>
-          </div>
+<% provide(:title, 'Sign up') %>
 
-          <%= f.submit "登録", class:"btn btn-info" %>
-        <% end %>
-        <%= link_to 'ログインはこちら', login_path ,class: 'text-black' %>
+<div class="users-new-wrapper">
+  <div class="users-new-container">
+    <div class="row">
+      <div class='col-md-8 mx-auto'>
+        <div class='row'>
+          <div class='col-md-6 mx-auto'>
+            <h1 class="text-center text-black">Sign up</h1>
+            <%= form_for (@user) do |f| %>
+              <%= render 'shared/error_messages' %>
+              <div class="form-group">
+                <%= f.label :name, class: 'text-black' %>
+                <%= f.text_field :name, class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :email, class: 'text-black' %>
+                <%= f.text_field :email, class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :password, class: 'text-black' %>
+                <%= f.password_field :password, class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.label :password_confirmation, class: 'text-black' %>
+                <%= f.password_field :password_confirmation, class: 'form-control' %>
+              </div>
+              <div class="form-group">
+              <%= f.submit "登録", class:"btn btn-info" %>
+              <%= link_to 'ログインはこちら', login_path ,class: 'text-black' %>
+              <div class="form-group">    
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

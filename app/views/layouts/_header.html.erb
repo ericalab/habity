@@ -1,5 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-  <%= link_to "Habity", root_path %>
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="/about" style="width:55px">
+    <%= image_tag "icons/cat_home.png", class:'w-100' %>Habity
+  </a>
+</nav>
+
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,29 +14,29 @@
     <ul class="navbar-nav ml-auto">
       <% if logged_in? %>
           <li class='nav-item' style='max-width:65px;'>
-            <%= link_to habits_index_path, class:'nav-link' do %>
-              <%= image_tag "icons/habit.png",class:'w-100' %>
+            <%= link_to habits_path, class:'nav-link' do %>
+              <%= image_tag "icons/habit.png",class:'w-100' %>Habit
             <% end %>
           </li>
           <li class='nav-item' style='max-width:65px;'>
-            <%= link_to hobbys_path, class:'nav-link' do %>
-              <%= image_tag "icons/hobby.png",class:'w-100' %>
+            <%= link_to hobbies_path, class:'nav-link' do %>
+              <%= image_tag "icons/hobby.png",class:'w-100' %>Hobby
             <% end %>
           </li>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to logout_path, method: :delete, class:'nav-link' do %>
-              <%= image_tag "icons/logout.png",class:'w-100' %>
+              <%= image_tag "icons/logout.png",class:'w-100' %>Logout
             <% end %>
           </li>
         <% else %>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to new_user_path , class:'nav-link' do %>
-              <%= image_tag "icons/register.png",class:'w-100' %>
+              <%= image_tag "icons/register.png",class:'w-100' %>Signup
             <% end %>
           </li>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to login_path, class:'nav-link' do %>
-              <%= image_tag "icons/login.png",class:'w-100' %>
+              <%= image_tag "icons/login.png",class:'w-100' %>Login
             <% end %>
           </li>
         <% end %>

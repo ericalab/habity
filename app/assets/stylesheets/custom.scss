@@ -58,7 +58,7 @@ h1, h2 {
   background-color: ffffacd;
 
   .users-new-container {
-    padding-top: 220px;
+    padding-top: 100px;
 
     .form-group {
       margin-bottom: 20px;
@@ -72,6 +72,63 @@ h1, h2 {
   width: 100%;
   z-index: 10000;
 }
+
+
+.habits-new-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url('bg-top.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: ffffacd;
+  
+  .habits-container {
+    padding-top: 50px;
+
+    .form-group {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      
+      .btn-info { 
+        margin-top: 50px;
+        margin-bottom: 50px;
+        
+        .btn{
+         text-align: center
+        }
+      }
+    }
+  }
+}
+
+.hobbies-new-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url('bg-top.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: ffffacd;
+  
+  .hobbies-container {
+    padding-top: 50px;
+
+    .form-group {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      
+    }
+  }
+}
+
+.btn-info{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 
 /* navbar */
 
@@ -94,3 +151,40 @@ img {
 .nav > li > a > img {
   width:15%;
 }
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* forms */
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+// .field_with_errors {
+//   @extend .has-error;
+//   .form-control {
+//     color: red;
+//   }
+// }

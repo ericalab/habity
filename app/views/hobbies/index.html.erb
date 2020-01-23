@@ -1,0 +1,25 @@
+<% provide(:title, 'Hobby') %>
+
+<div class="hobbies-new-wrapper">
+  <div class="hobbies-container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        
+        <h1>Hobby page</h1>
+        
+        <%= link_to "What you've done", new_hobby_path, class: 'btn btn-info' %>
+        
+        
+        <% current_user.hobbies.each do |hobby|  %>
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+          <div class="card-header"><%= hobby.category.category_name %></div>
+          <div class="card-body text-info">
+            <h5 class="card-title"><%= hobby.title %></h5>
+            <p class="card-text">🌟<%= hobby.impression %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
