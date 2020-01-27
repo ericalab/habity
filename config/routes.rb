@@ -8,8 +8,15 @@ Rails.application.routes.draw do
   delete 'logout', to:'sessions#destroy'
   post '/save_habit', to:'habits#save_achievement'
   resources :users
-  resources :habits
-  resources :hobbies
+  resources :habits, only: [:index]
+  resources :hobbies, only: [:index, :new, :create, :destroy]
   
+  get '/hobbies/csv_output', to:'hobbies#csv_output'
   
+  get '/daily_habit/new' => 'habits#new_daily'
+  get '/weekly_habit/new' => 'habits#new_weekly'
+  post '/daily_habit' => 'habits#create_daily'
+  post '/weekly_habit' => 'habits#create_weekly'
+  delete "/daily_habit/:id"=> "habits#daily_destroy"
+  delete "/weekly_habit/:id"=> "habits#weekly_destroy"
 end

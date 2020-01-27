@@ -1,6 +1,8 @@
+require 'csv'
 class HobbiesController < ApplicationController
   
   def index
+    @categories = Category.joins(:hobbies).where(hobbies: {user_id: current_user}).uniq
   end 
     
   def new
@@ -19,6 +21,22 @@ class HobbiesController < ApplicationController
   end
   
   def destroy
+    hobby=Hobby.find(params[:id])
+    hobby.delete
+    redirect_to hobbies_path, success: "Deleted it successfully!"
+  end
+  
+  def csv_output
+    @hobbies = Hobby.where(user_id: current_user, category_id: params[:category_id])
+    respond_to do |format|
+      format.html do
+          #html用の処理を書く
+      end 
+      format.csv do
+          #csv用の処理を書く
+          send_data render_to_string, filename: "hobbies.csv", type: :csv
+      end
+    end
   end
   
   private

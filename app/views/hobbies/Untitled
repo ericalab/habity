@@ -1,0 +1,10 @@
+        <!--<% current_user.hobbies.each do |hobby|  %>-->
+        <!--<div class="card border-info mb-3" style="max-width: 18rem;">-->
+        <!--  <div class="card-header"><%= hobby.category.name %></div>-->
+        <!--  <div class="card-body text-info">-->
+        <!--    <h5 class="card-title"><%= hobby.title %></h5>-->
+        <!--    <p class="card-text">🌟<%= hobby.impression %></p>-->
+        <!--    <%= link_to "Delete", "/hobbies/#{hobby.id}", method: :delete, data: {confirm: "Are you sure?"} %>-->
+        <!--  </div>-->
+        <!--</div>-->
+        <!--<% end %>-->

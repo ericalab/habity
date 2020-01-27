@@ -5,39 +5,38 @@
     <div class="row">
       <div class="col-md-8 mx-auto">
         <h1>Habit page!</h1>
-        <%= link_to "New habits", new_habit_path, class: 'btn btn-info' %>
-
+        <%= link_to "New daily habits", daily_habit_new_path, class: 'btn btn-info' %>
+        <%= link_to "New weekly habits", weekly_habit_new_path, class: 'btn btn-info' %>
       <div class='card'>
         <div class='card-header'>
           <h1 class="text-center text-black">Daily</h1>
         </div>
       
-      <%= form_tag(save_habit_path, method: :post) do %>
-        <% cnt = 0 %>
-        <% current_user.daily_habits.each do |habit|  %>
+      <%= form_with(url: save_habit_path, local: false) do %>
+        <% current_user.daily_habits.each_with_index do |habit, i|  %>
         <div class='card-body'>
-          <h2 class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= cnt %>]" value="<%= habit.id %>"><%= habit.name %>→Daily Total:<%= habit.total %></h2>
+          <label class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= i %>]" value="<%= habit.id %>"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
+          <%= link_to "削除する", "/daily_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
         </div>
-        <!--<input type="hidden" name="habit_id_daily[]" value="<%#= habit.id %>">-->
-        <% cnt += 1 %>
-        <% end %>
+      <% end %>
       </div>
       
       <div class='card'>
         <div class='card-header'>
           <h1 class="text-center text-black">Weekly</h1>
         </div>  
-        <% current_user.weekly_habits.each do |habit|  %>  
+        <% current_user.weekly_habits.each_with_index do |habit, j|  %>  
         <div class='card-body'>
-          <h2 class="text-center text-black"><input type="checkbox" name="achievement_weekly[]"><%= habit.name %>→Weekly Total:<%= habit.total %></h2>
+          <label class="text-center text-black"><input type="checkbox" name="achievement_weekly[<%= j %>]" value="<%= habit.id %>"><%= habit.name %>→Weekly Total:<%= habit.weekly_achievements.count %> </label>
+          <%= link_to "削除する", "/weekly_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
         </div>
-        <input type="hidden" name="habit_id_weekly[]" value="<%= habit.id %>">
         <% end %>
-        <%= button_tag type: :submit do %>
-          <%= image_tag "icons/cat_straight.png" %>
+        <%= button_tag type: :submit, id: "cat_image" do %>
+          <%= render "cat_image" %>
         <% end %>
       </div>
       <% end %>
+      
     </div>
   </div>
 </div>

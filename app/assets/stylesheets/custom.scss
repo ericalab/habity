@@ -1,5 +1,5 @@
 h1, h2 {
-  font-weight: 100;
+  font-weight: 70;
 }
 
 .text-white {
@@ -85,18 +85,23 @@ h1, h2 {
   background-color: ffffacd;
   
   .habits-container {
+    background-color: #f5fffa;
     padding-top: 50px;
-
-    .form-group {
-      margin-top: 50px;
-      margin-bottom: 50px;
-      
+    
+    .card-header{
+    background-color: #afeeee;
+    
+      .card-body{
+        
+      }
+    
       .btn-info { 
         margin-top: 50px;
         margin-bottom: 50px;
         
         .btn{
          text-align: center
+
         }
       }
     }
@@ -114,12 +119,15 @@ h1, h2 {
   background-color: ffffacd;
   
   .hobbies-container {
+    background-color: #fffff0;
     padding-top: 50px;
-
-    .form-group {
-      margin-top: 50px;
-      margin-bottom: 50px;
       
+    .card-header{
+      background-color: #ffd700;
+      
+      .card-deck{
+         margin-buttom : 10px;
+      }
     }
   }
 }

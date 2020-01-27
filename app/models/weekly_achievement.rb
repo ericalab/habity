@@ -1,3 +1,3 @@
 class WeeklyAchievement < ApplicationRecord
-  belongs_to :user
+    belongs_to :weekly_habit
 end

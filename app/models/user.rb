@@ -5,11 +5,11 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
   validates :password, length: { in: 8..32 },format: { with: /\A[A-Za-z]\w*\z/ }
   has_secure_password
-
-  has_many :hobbies
-  has_many :achievements
-  has_many :daily_habits
-  has_many :weekly_habits
-  has_many :daily_achievements
-  has_many :weekly_achievements
-;end
+  
+  has_many :daily_habits, dependent: :destroy
+  has_many :weekly_habits, dependent: :destroy
+  has_many :daily_achievements, dependent: :destroy
+  has_many :weekly_achievements, dependent: :destroy
+  has_many :hobbies, dependent: :destroy
+  
+end

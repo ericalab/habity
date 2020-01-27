@@ -7,18 +7,31 @@
         
         <h1>Hobby page</h1>
         
+        
         <%= link_to "What you've done", new_hobby_path, class: 'btn btn-info' %>
         
-        
-        <% current_user.hobbies.each do |hobby|  %>
-        <div class="card border-info mb-3" style="max-width: 18rem;">
-          <div class="card-header"><%= hobby.category.category_name %></div>
-          <div class="card-body text-info">
-            <h5 class="card-title"><%= hobby.title %></h5>
-            <p class="card-text">🌟<%= hobby.impression %></p>
+          <div class="row row-cols-1 row-cols-md-2">
+            <% @categories.each do |category| %>
+              <div class="col mb-4">
+                <div class="card text-info">
+                  <div class="card-header text-white">
+                    <%= category.name %>
+                  </div>
+                  
+                  <% category.hobbies.each do |hobby| %>
+                    <div class ="card-body">
+                      <h5 class="card-title"><%= hobby.title %></h5>
+                      <p class="card-text">🌟<%= hobby.impression %></p>
+                      <%= link_to "Delete", "/hobbies/#{hobby.id}", method: :delete %>
+                    </div>
+                  <% end %>
+                  <%= link_to "CSV出力", hobbies_csv_output_path(format: :csv, category_id: category.id) %>
+                </div>
+              </div>
+            <% end %>
           </div>
-        </div>
-        <% end %>
+        
+      <%= image_tag 'icons/cat_computer.png' %>
       </div>
     </div>
   </div>

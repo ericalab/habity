@@ -1,0 +1,20 @@
+<div class="habits-new-wrapper">
+  <div class="habits-container">
+    <div class="row">
+      <div class='col-md-8 mx-auto'>
+        <div class='row'>
+          <div class='col-md-6 mx-auto'>
+            <h1 class="text-center text-black">Register your new habits!</h1>
+            <%= form_with(model: @habit, url: weekly_habit_path) do |f| %>
+              <div class="form-group">
+                <%= f.label :name, "Please type your Weekly Habit!" %>
+                <%= f.text_field :name, class: "form-control" %>
+              </div>
+              <%= f.submit "Send", class:"btn btn-info" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
