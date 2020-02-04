@@ -66,7 +66,7 @@ class HabitsController < ApplicationController
         end
       end
     end
-    redirect_to habits_path, success: "Way to go!"
+    # redirect_to habits_path, success: "Way to go!"
   end
   
   def daily_destroy

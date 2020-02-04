@@ -10,22 +10,51 @@
         
         <%= link_to "What you've done", new_hobby_path, class: 'btn btn-info' %>
         
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item">Movie</a>
+              <a class="dropdown-item">Book</a>
+              <a class="dropdown-item">Youtube</a>
+              <a class="dropdown-item">Netflix</a>
+              <a class="dropdown-item">Fulu</a>
+              <a class="dropdown-item">PrimeVideo</a>
+              <a class="dropdown-item">TV</a>
+              <a class="dropdown-item">Study</a>
+              <a class="dropdown-item">Game</a>
+              <a class="dropdown-item">Travel</a>
+              <a class="dropdown-item">Others</a>
+            </div>
+          </div>
+          <script>
+            $(".dropdown-item").on("click",function(){
+              console.log($(this).text());
+              var select_id = $(this).text();
+              $(".category_area").addClass("d-none");
+              $("#"+select_id).removeClass("d-none");
+            });
+          </script>
+          
           <div class="row row-cols-1 row-cols-md-2">
             <% @categories.each do |category| %>
-              <div class="col mb-4">
+              <div class="col mb-4 d-none category_area" id="<%= category.name %>">
                 <div class="card text-info">
                   <div class="card-header text-white">
                     <%= category.name %>
                   </div>
-                  
                   <% category.hobbies.each do |hobby| %>
                     <div class ="card-body">
                       <h5 class="card-title"><%= hobby.title %></h5>
                       <p class="card-text">🌟<%= hobby.impression %></p>
-                      <%= link_to "Delete", "/hobbies/#{hobby.id}", method: :delete %>
+                      <%= link_to "Delete", "/hobbies/#{hobby.id}", method: :delete, class: "btn-sm btn btn-danger" %>
                     </div>
+                    <hr>
                   <% end %>
-                  <%= link_to "CSV出力", hobbies_csv_output_path(format: :csv, category_id: category.id) %>
+                  <div class='card-body'>
+                    <%= link_to "CSV出力", hobbies_csv_output_path(format: :csv, category_id: category.id), class: "small" %>
+                  </div>
                 </div>
               </div>
             <% end %>

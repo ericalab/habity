@@ -24,10 +24,16 @@
             <% end %>
           </li>
           <li class='nav-item' style='max-width:65px;'>
+            <%= link_to user_path, class:'nav-link' do %>
+              <%= image_tag "icons/cat_profile.png",class:'w-100' %>Profile
+            <% end %>
+          </li>
+          <li class='nav-item' style='max-width:65px;'>
             <%= link_to logout_path, method: :delete, class:'nav-link' do %>
               <%= image_tag "icons/logout.png",class:'w-100' %>Logout
             <% end %>
           </li>
+          
         <% else %>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to new_user_path , class:'nav-link' do %>

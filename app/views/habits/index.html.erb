@@ -12,14 +12,14 @@
           <h1 class="text-center text-black">Daily</h1>
         </div>
       
-      <%= form_with(url: save_habit_path, local: false) do %>
+      <%= form_with(url: save_habit_path, local: false) do |f| %>
         <% current_user.daily_habits.each_with_index do |habit, i|  %>
-        <div class='card-body'>
-          <label class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= i %>]" value="<%= habit.id %>"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
-          <%= link_to "削除する", "/daily_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
-        </div>
-      <% end %>
-      </div>
+          <div class='card-body'>
+            <label class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= i %>]" value="<%= habit.id %>"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
+            <%= link_to "削除する", "/daily_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
+          </div>
+        <% end %>
+      <!--</div>-->
       
       <div class='card'>
         <div class='card-header'>

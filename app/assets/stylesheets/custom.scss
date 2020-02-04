@@ -121,12 +121,16 @@ h1, h2 {
   .hobbies-container {
     background-color: #fffff0;
     padding-top: 50px;
+    
+    .dropdown{
+       margin-bottom: 20px;
+
+      .card-header{
+        background-color: #ffd700;
       
-    .card-header{
-      background-color: #ffd700;
-      
-      .card-deck{
-         margin-buttom : 10px;
+        .card-deck{
+           margin-bottom: 10px;
+        }
       }
     }
   }
@@ -188,6 +192,20 @@ $gray-medium-light: #eaeaea;
     color: red;
     margin: 0 0 30px 0;
   }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
 
 // .field_with_errors {
