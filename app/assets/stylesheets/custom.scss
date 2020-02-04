@@ -55,17 +55,32 @@ h1, h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: ffffacd;
+  background-color: #fffafa;
 
   .users-new-container {
-    padding-top: 100px;
-
-    .form-group {
-      margin-bottom: 20px;
-    }
+    padding-top: 60px;
+  
   }
 }
 
+.users-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: image-url('bg-top.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fffafa;
+
+  .users-container {
+    padding-top: 60px;
+  
+    .card-header{
+      background-color: #ffe4e1;
+    }
+  }
+}
 .alert {
   margin-bottom: 0px;
   position: fixed;
@@ -88,13 +103,10 @@ h1, h2 {
     background-color: #f5fffa;
     padding-top: 50px;
     
+    
     .card-header{
-    background-color: #afeeee;
-    
-      .card-body{
-        
-      }
-    
+      background-color: #ccffff;
+      
       .btn-info { 
         margin-top: 50px;
         margin-bottom: 50px;
@@ -124,14 +136,10 @@ h1, h2 {
     
     .dropdown{
        margin-bottom: 20px;
+    }
 
-      .card-header{
-        background-color: #ffd700;
-      
-        .card-deck{
-           margin-bottom: 10px;
-        }
-      }
+    .card-header{
+        background-color: #ffcc66;
     }
   }
 }
@@ -150,18 +158,15 @@ h1, h2 {
   a {
     color: #fff !important;
   }
+}
 
 .navbar-brand {
     padding: 0px;
     margin-top: 15px;
-  }
-
-img {
-    height: 10px;
-  }
 }
-.nav > li > a > img {
-  width:15%;
+.nav-link img{
+  height: 55px;
+  width: 100%;
 }
 
 /* mixins, variables, etc. */
@@ -207,10 +212,3 @@ $gray-medium-light: #eaeaea;
   width: auto;
   margin-left: 0;
 }
-
-// .field_with_errors {
-//   @extend .has-error;
-//   .form-control {
-//     color: red;
-//   }
-// }

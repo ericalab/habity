@@ -15,25 +15,24 @@
       <% if logged_in? %>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to habits_path, class:'nav-link' do %>
-              <%= image_tag "icons/habit.png",class:'w-100' %>Habit
+              <%= image_tag "icons/cat_habit.png",class:'w-100' %>Habit
             <% end %>
           </li>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to hobbies_path, class:'nav-link' do %>
-              <%= image_tag "icons/hobby.png",class:'w-100' %>Hobby
+              <%= image_tag "icons/cat_hobby.png",class:'w-100' %>Hobby
             <% end %>
           </li>
           <li class='nav-item' style='max-width:65px;'>
-            <%= link_to user_path, class:'nav-link' do %>
+            <%= link_to '/users/show', class:'nav-link' do %>
               <%= image_tag "icons/cat_profile.png",class:'w-100' %>Profile
             <% end %>
           </li>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to logout_path, method: :delete, class:'nav-link' do %>
-              <%= image_tag "icons/logout.png",class:'w-100' %>Logout
+              <%= image_tag "icons/logout.png",class:'w-100' %>
             <% end %>
           </li>
-          
         <% else %>
           <li class='nav-item' style='max-width:65px;'>
             <%= link_to new_user_path , class:'nav-link' do %>

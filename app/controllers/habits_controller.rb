@@ -41,7 +41,7 @@ class HabitsController < ApplicationController
       flash[:success] = "Registerd your new habits successfully!"
       redirect_to habits_path
     else
-      flash.now[:danger] = "Registration failed... :("
+      flash.now[:danger] = "Registration has been failed... :("
       render :new
     end
   end
@@ -66,21 +66,21 @@ class HabitsController < ApplicationController
         end
       end
     end
-    # redirect_to habits_path, success: "Way to go!"
+    redirect_to habits_path, success: "Way to go!"
   end
   
   def daily_destroy
     habit=DailyHabit.find(params[:id])
     habit.daily_achievements.delete_all
     habit.delete
-    redirect_to habits_path, success: "Your daily habit has been deleted it!"
+    redirect_to habits_path, success: "Your daily habit has been deleted!"
   end
   
   def weekly_destroy
     habit=WeeklyHabit.find(params[:id])
     habit.weekly_achievements.delete_all
     habit.delete
-    redirect_to habits_path, success: "Your weekly habit has been deleted it!"
+    redirect_to habits_path, success: "Your weekly habit has been deleted!"
   end
   
   
