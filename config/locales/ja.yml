@@ -1,0 +1,56 @@
+ja:
+  static_pages:
+    index:
+      title: "毎日の記録を残そう！"
+  habits:
+    index:
+      title: "毎日/毎週の習慣"
+      title_d: "毎日やること"
+      title_w: "毎週やること"
+    new_daily:
+      register: "新しい習慣（毎日）!"
+    new_weekly:
+      register: "新しい習慣（毎週）!"
+
+  activerecord:                 ## モデルの開始はactiverecord
+    models:                     ## モデル
+      User: "ユーザー"
+    attributes:                 ## 属性（カラム)
+      User:
+        id: "ID"
+        name: "名前"
+        email: "メールアドレス"
+        created_at: "登録日"
+        updated_at: "更新日"
+        
+  dictionary:                    ## 共通系であることを示す
+    title:                       ## 画面のタイトル
+      create: "新規作成"
+      update: "更新"
+      destory:
+        confirm: "削除確認"
+    message:                     ## 固定メッセージ
+      create:
+        complete: "登録しました"
+      update:
+        complete: "更新しました"
+      destory:
+        confirm: "削除しますか？"
+        
+    label:
+      login: "ログイン"
+      signup: "新規登録"
+      remember_me: "次回から自動的にログイン"
+      name: "名前"
+      email: "メールアドレス"
+      password: "パスワード"
+      password_confirmation: "確認用パスワード"
+      
+      
+    button:                      ## 表示するボタン
+      create: "新規作成"
+      search: "検索"
+      clear: "クリア"
+      update: "更新"
+      destroy: "削除"
+      cancel: "キャンセル"

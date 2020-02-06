@@ -4,22 +4,20 @@
       <div class='col-md-8 mx-auto'>
         <% @users.each do |user| %>
           <div class="card">
-            <h5 class="card-header">user.name</h5>
+            <h5 class="card-header"><%= user.name %></h5>
             <div class="card-body">
-              <% user.daily_habits do |daily_habit| %>
-                <h5 class="card-title">Daily Habit<%= daily_habit %></h5>
+              <h5 class="card-title">[Daily Habit]<h5>
+              <% user.daily_habits.each do |daily_habit| %>
+                <h5><%= daily_habit.name %></h5>
               <% end %>
-              <% user.weekly_habits do |weekly_habit| %>
-                <h5 class="card-title">Weekly Habit<%= weekly_habit %></h5>
+              <hr>
+              <h5 class="card-title">[Weekly Habit]<h5>
+              <% user.weekly_habits.each do |weekly_habit| %>
+                <%= weekly_habit.name %></h5>
               <% end %>
-            </div>
-
-            <div class="card-body">
-              <%= user.categories.each do |category| %>
-              <p class="card-text"><%= category.name %>,</p>
-              <a href="#" class="btn btn-primary">Details</a> 
             </div>
           </div>
+          <%= link_to('詳細', "users/" + user.id.to_s)%>
         <% end %>
       </div>
     </div>

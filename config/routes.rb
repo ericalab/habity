@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   post '/weekly_habit' => 'habits#create_weekly'
   delete "/daily_habit/:id"=> "habits#daily_destroy"
   delete "/weekly_habit/:id"=> "habits#weekly_destroy"
+  
 end

@@ -1,23 +1,51 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  static_pages:
+    index:
+      title: "Let's log what you did today!"
+  habits:
+    index:
+      title: "Daily/Weekly Habit!"
+      title_d: "Daily routine"
+      title_w: "Weekly routine"
+    new_daily:
+      register: "Your new daily habit!"
+    new_weekly:
+      register: "Your new weekly habit!"
+
+  activerecord:                
+    models:                     
+      User: "User"
+    attributes:                 
+      User:
+        id: "ID"
+        name: "Name"
+        email: "Email"
+        created_at: "created_at"
+        updated_at: "updated_at"
+        
+  dictionary:                    ## 共通系であることを示す
+    message:                     ## 固定メッセージ
+      create:
+        complete: "登録しました"
+      update:
+        complete: "更新しました"
+      destory:
+        confirm: "削除しますか？"
+        
+    label:
+      login: "Login"
+      signup: "Signup"
+      remember_me: "Remember me on this computer."
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password Confirmation"
+      
+    button:                      ## 表示するボタン
+      create: "create"
+      search: "search"
+      clear: "clear"
+      update: "update"
+      destroy: "destroy"
+      cancel: "cancel"     
+        

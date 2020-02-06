@@ -4,13 +4,14 @@
       <div class='col-md-8 mx-auto'>
         <div class='row'>
           <div class='col-md-6 mx-auto'>
-            <h1 class="text-center text-black">Register your new habits!</h1>
+            <h1 class="text-center text-black"><%= t('habits.new_daily.register') %></h1>
             <%= form_with(model: @habit, url: daily_habit_path) do |f| %>
               <div class="form-group">
-                <%= f.label :name, "Please type your Daily Habit!" %>
+                <%= f.label :name, "Type your new daily routine!" %>
                 <%= f.text_field :name, class: "form-control" %>
               </div>
               <%= f.submit "Send", class:"btn btn-info" %>
+              
             <% end %>
           </div>
         </div>

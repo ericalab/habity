@@ -4,38 +4,51 @@
   <div class="habits-container">
     <div class="row">
       <div class="col-md-8 mx-auto">
-        <h1>Habit page!</h1>
-        <%= link_to "New daily habits", daily_habit_new_path, class: 'btn btn-info' %>
-        <%= link_to "New weekly habits", weekly_habit_new_path, class: 'btn btn-info' %>
+        <h1><%= t('habits.index.title') %></h1>
+        <%= link_to "New daily habit", daily_habit_new_path, class: 'btn btn-info' %>
+        <%= link_to "New weekly habit", weekly_habit_new_path, class: 'btn btn-info' %>
+        <hr>
+    
       <div class='card'>
         <div class='card-header'>
-          <h1 class="text-center text-black">Daily</h1>
+          <h2 class="text-center text-black"><%= t('habits.index.title_d') %></h2>
         </div>
       
       <%= form_with(url: save_habit_path, local: false) do |f| %>
         <% current_user.daily_habits.each_with_index do |habit, i|  %>
           <div class='card-body'>
             <label class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= i %>]" value="<%= habit.id %>"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
-            <%= link_to "削除する", "/daily_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
+            <%= link_to "Delete", "/daily_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
           </div>
         <% end %>
-      <!--</div>-->
-      
-      <div class='card'>
-        <div class='card-header'>
-          <h1 class="text-center text-black">Weekly</h1>
-        </div>  
-        <% current_user.weekly_habits.each_with_index do |habit, j|  %>  
-        <div class='card-body'>
-          <label class="text-center text-black"><input type="checkbox" name="achievement_weekly[<%= j %>]" value="<%= habit.id %>"><%= habit.name %>→Weekly Total:<%= habit.weekly_achievements.count %> </label>
-          <%= link_to "削除する", "/weekly_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
+        
+        <div class='card'>
+          <div class='card-header'>
+            <h2 class="text-center text-black"><%= t('habits.index.title_w') %></h2>
+          </div>  
+          <% current_user.weekly_habits.each_with_index do |habit, j|  %>  
+          <div class='card-body'>
+            <label class="text-center text-black"><input type="checkbox" name="achievement_weekly[<%= j %>]" value="<%= habit.id %>"><%= habit.name %>→Weekly Total:<%= habit.weekly_achievements.count %> </label>
+            <%= link_to "Delete", "/weekly_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
+          </div>
+          <% end %>
+          <%= button_tag type: :submit, id: "cat_image" do %>
+          
+          <!--<input type="button" value="Check" onclick="myfunc()">-->
+          
+            <%= render "cat_image" %>
+          <% end %>
         </div>
-        <% end %>
-        <%= button_tag type: :submit, id: "cat_image" do %>
-          <%= render "cat_image" %>
-        <% end %>
-      </div>
       <% end %>
+      
+         <script>
+       
+        //   var myfunc = function () {
+        //     console.log();
+        //   }
+       
+        // </script>
+      
       
     </div>
   </div>

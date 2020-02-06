@@ -3,15 +3,15 @@
 <div class="top-hero-wrapper text-center">
   <div class="container top-hero-container">
     <h1 class="text-black">Habity</h1>
-    <h2 class="text-black">Let's log what you did today!</h2>
+    <h2 class="text-black"><%= t('static_pages.index.title') %></h2>
     <div class="row">
       <div class='col-md-8 mx-auto'>
         <div class='row'>
           <div class='col-md-6'>
-            <%= link_to 'Sign up', new_user_path, class: 'btn w-100 btn-white m-3' %>
+            <%= link_to t("dictionary.label.signup"), new_user_path, class: 'btn w-100 btn-white m-3' %>
           </div>
           <div class="col-md-6">
-             <%= link_to 'Log in', login_path, class: 'btn w-100 btn-white m-3' %>
+             <%= link_to t("dictionary.label.login")  , login_path, class: 'btn w-100 btn-white m-3' %>
           </div>
         </div>
       </div>

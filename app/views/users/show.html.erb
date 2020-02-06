@@ -5,13 +5,13 @@
   <div class="users-container">
     <div class="row">
       <div class="col-md-8 mx-auto">
-        <h1>User name : <%= current_user.name %></h1>
+        <h1>User name : <%= @user.name %></h1>
         
         <div class='card'>
           <div class='card-header'>
             <h1 class="text-center text-black">Daily_Habit</h1>
           </div>
-          <% current_user.daily_habits.each do |habit|  %>
+          <% @user.daily_habits.each do |habit|  %>
             <div class='card-body'>
               <label class="text-center text-black"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
            </div>
@@ -23,7 +23,7 @@
           <div class='card-header'>
             <h1 class="text-center text-black">Weekly_Habit</h1>
           </div>  
-          <% current_user.weekly_habits.each do |habit|  %>  
+          <% @user.weekly_habits.each do |habit|  %>  
           <div class='card-body'>
             <label class="text-center text-black"><%= habit.name %>→Weekly Total:<%= habit.weekly_achievements.count %> </label>
           </div>
@@ -34,7 +34,7 @@
           <div class='card-header'>
             <h1 class="text-center text-black">Hobby</h1>
           </div>
-          <% current_user.hobbies.each do |hobby|  %>
+          <% @user.hobbies.each do |hobby|  %>
           <div class='card-body'>
             <label class="text-center text-black"><%= hobby.title %><%= hobby.impression %></label>
           </div>
