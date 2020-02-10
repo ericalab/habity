@@ -3,7 +3,7 @@
 <div class="habits-new-wrapper">
   <div class="habits-container">
     <div class="row">
-      <div class="col-md-8 mx-auto">
+      <div class="col-md-6 mx-auto">
         <h1><%= t('habits.index.title') %></h1>
         <%= link_to "New daily habit", daily_habit_new_path, class: 'btn btn-info' %>
         <%= link_to "New weekly habit", weekly_habit_new_path, class: 'btn btn-info' %>
@@ -14,7 +14,7 @@
           <h2 class="text-center text-black"><%= t('habits.index.title_d') %></h2>
         </div>
       
-      <%= form_with(url: save_habit_path, local: false) do |f| %>
+      <%= form_with(url: save_habit_path, local: false, id: "achievement_form") do |f| %>
         <% current_user.daily_habits.each_with_index do |habit, i|  %>
           <div class='card-body'>
             <label class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= i %>]" value="<%= habit.id %>"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
@@ -33,23 +33,23 @@
           </div>
           <% end %>
           <%= button_tag type: :submit, id: "cat_image" do %>
-          
-          <!--<input type="button" value="Check" onclick="myfunc()">-->
-          
             <%= render "cat_image" %>
           <% end %>
         </div>
       <% end %>
       
-         <script>
-       
-        //   var myfunc = function () {
-        //     console.log();
-        //   }
-       
-        // </script>
-      
-      
+        <script>
+        $('#cat_image').on('click', function(e) {
+          e.preventDefault();
+          $("#cat_image img").attr('src', '/images/cat_smile.png');
+     
+          setTimeout(function() {
+            console.log('submit');
+            $('#achievement_form').submit();
+          }, 3000);
+        });
+        </script>
+        
     </div>
   </div>
 </div>

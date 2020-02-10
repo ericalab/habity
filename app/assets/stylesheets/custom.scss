@@ -23,12 +23,13 @@ h1, h2 {
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: url('bg-top.png');
+  background-image: url('icons/bg-top.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: ffffacd;
+  overflow: hidden;
 }
 
 .top-hero-container {
@@ -37,9 +38,32 @@ h1, h2 {
     font-size: 56px;
     margin-bottom: 20px;
   }
-  
   h2 {
     margin-bottom: 60px;
+  }
+}
+
+.about-wrapper {
+  width: 100vw;
+  height: 100vh;
+  // background-image: url('icons/bg-top.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: ffffacd;
+  overflow: hidden;
+}
+
+.about-container {
+  padding-top: 150px;
+  h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
   }
 }
 
@@ -50,7 +74,6 @@ h1, h2 {
 .users-new-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: image-url('bg-top.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -59,14 +82,12 @@ h1, h2 {
 
   .users-new-container {
     padding-top: 60px;
-  
   }
 }
 
 .users-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: image-url('bg-top.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -92,7 +113,6 @@ h1, h2 {
 .habits-new-wrapper{
   width: 100vw;
   height: 100vh;
-  background-image: image-url('bg-top.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -103,18 +123,17 @@ h1, h2 {
     background-color: #f5fffa;
     padding-top: 50px;
     
-    
     .card-header{
       background-color: #ccffff;
-      
-      .btn-info { 
-        margin-top: 50px;
-        margin-bottom: 50px;
-        
-        .btn{
-         text-align: center
 
-        }
+        .btn-info { 
+          margin-top: 50px;
+          margin-bottom: 50px;
+          
+          .btn{
+           text-align: center
+  
+          }
       }
     }
   }
@@ -161,8 +180,8 @@ h1, h2 {
 }
 
 .navbar-brand {
-    padding: 0px;
-    margin-top: 15px;
+  padding: 0px;
+  margin-top: 15px;
 }
 .nav-link img{
   height: 55px;
