@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent navbar-dark bg-info">
-  <a class="navbar-brand" href="/about" style="width:55px">
+  <a class="navbar-brand" href="/about" style="width:40px">
     <%= image_tag "icons/cat_home.png", class:'w-100' %>Habity
   </a>
 
@@ -10,20 +10,26 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <% if logged_in? %>
-          <li class='nav-item' style='max-width:65px;'>
+          <li class='nav-item' style='max-width:65px;' data-toggle="tooltip" title="Habit" data-placement="bottom">
             <%= link_to habits_path, class:'nav-link' do %>
-              <%= image_tag "icons/cat_habit.png",class:'w-100' %>Habit
+              <%= image_tag "icons/footprint.png",class:'w-100'%>
             <% end %>
           </li>
-          <li class='nav-item' style='max-width:65px;'>
+          <li class='nav-item' style='max-width:65px;' data-toggle="tooltip" title="Hobby" data-placement="bottom">
             <%= link_to hobbies_path, class:'nav-link' do %>
-              <%= image_tag "icons/cat_hobby.png",class:'w-100' %>Hobby
+              <%= image_tag "icons/footprint.png",class:'w-100' %>
             <% end %>
           </li>
-          <li class='nav-item' style='max-width:65px;'>
+          <li class='nav-item' style='max-width:65px;' data-toggle="tooltip" title="Users" data-placement="bottom">
             <%= link_to users_path , class:'nav-link' do %>
-              <%= image_tag "icons/cat_profile.png",class:'w-100' %>Users
+              <%= image_tag "icons/cat_user.png",class:'w-100' %>
             <% end %>
+          </li>
+          <li class="dropdown">
+            <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+            </ul>
           </li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b></a>
@@ -57,5 +63,12 @@
           </li>
         <% end %>
     </ul>
+    
+    <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    </script>
+    
   </div>
 </nav>

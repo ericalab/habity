@@ -1,5 +1,11 @@
+
 h1, h2 {
-  font-weight: 70;
+  font-weight: 40;
+  font-size: 22px;
+}
+
+h5{
+  font-size: 12px;
 }
 
 .text-white {
@@ -28,18 +34,23 @@ h1, h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: ffffacd;
+  background-color: #F5FFFA;
   overflow: hidden;
-}
 
-.top-hero-container {
-  padding-top: 220px;
-  h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
-  }
-  h2 {
-    margin-bottom: 60px;
+  .top-hero-container {
+    padding-top: 160px;
+  
+    h1 {
+      font-size: 56px;
+      color: #fff;
+      margin-bottom: 60px;
+    }
+      
+    h2 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 90px;
+    }
   }
 }
 
@@ -51,7 +62,7 @@ h1, h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: ffffacd;
+  background-color: #F5FFFA;
   overflow: hidden;
 }
 
@@ -81,7 +92,7 @@ h1, h2 {
   background-color: #fffafa;
 
   .users-new-container {
-    padding-top: 60px;
+    padding-top: 100px;
   }
 }
 
@@ -95,7 +106,7 @@ h1, h2 {
   background-color: #fffafa;
 
   .users-container {
-    padding-top: 60px;
+    padding-top: 100px;
   
     .card-header{
       background-color: #ffe4e1;
@@ -117,23 +128,23 @@ h1, h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: ffffacd;
+  background-color: #f5fffa;
   
   .habits-container {
-    background-color: #f5fffa;
-    padding-top: 50px;
+    padding-top: 100px;
     
     .card-header{
       background-color: #ccffff;
 
-        .btn-info { 
-          margin-top: 50px;
-          margin-bottom: 50px;
-          
-          .btn{
-           text-align: center
-  
-          }
+      .btn-info { 
+        margin-top: 50px;
+        margin-bottom: 50px;
+        
+        .btn{
+         text-align: center
+         
+        
+        }  
       }
     }
   }
@@ -147,18 +158,17 @@ h1, h2 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: ffffacd;
+  background-color: #fffff0;
   
   .hobbies-container {
-    background-color: #fffff0;
-    padding-top: 50px;
+    padding-top: 100px;
     
     .dropdown{
        margin-bottom: 20px;
-    }
 
-    .card-header{
+      .card-header{
         background-color: #ffcc66;
+      }
     }
   }
 }
@@ -174,6 +184,7 @@ h1, h2 {
 .navbar-transparent {
   margin-bottom: 0px;
   background-color: rgba(0,0,0,0.5);
+  opacity: 0.9;
   a {
     color: #fff !important;
   }
@@ -181,10 +192,10 @@ h1, h2 {
 
 .navbar-brand {
   padding: 0px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .nav-link img{
-  height: 55px;
+  height: 30px;
   width: 100%;
 }
 
@@ -231,3 +242,43 @@ $gray-medium-light: #eaeaea;
   width: auto;
   margin-left: 0;
 }
+
+/* sidebar */
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid #fffafa;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+

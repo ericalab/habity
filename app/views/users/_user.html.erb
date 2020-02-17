@@ -1,0 +1,23 @@
+<li>
+  <% @users.each do |user| %>
+    <div class="card">
+      <h2 class="card-header"><%= user.name %></h2>
+      <div class="card-body">
+        <h5 class="card-title">[Daily Habit]<h5>
+        <% user.daily_habits.each do |daily_habit| %>
+          <h5><%= daily_habit.name %></h5>
+        <% end %>
+        <hr>
+        <h5 class="card-title">[Weekly Habit]<h5>
+        <% user.weekly_habits.each do |weekly_habit| %>
+          <%= weekly_habit.name %></h5>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to('詳細', "users/" + user.id.to_s)%>
+  <% end %>
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</li>  

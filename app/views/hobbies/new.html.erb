@@ -4,22 +4,22 @@
       <div class='col-md-8 mx-auto'>
         <div class='row'>
           <div class='col-md-6 mx-auto'>
-            <h1 class="text-center text-black">Log what you've done!</h1>
+            <h1 class="text-center text-black"><%= t('hobbies.new.title') %></h1>
             
             <%= form_for (@hobby) do |f| %>
               <div class="form-group">
-                <%= f.label :"Category" %>
+                <%= f.label t('dictionary.label.category') %>
                 <%= f.select :category_id, [["Movie", "1"], ["Book", "2"], ["Youtube", "3"], ["Netflix", "4"], ["PrimeVideo", "5"], ["Fulu", "6"], ["TV", "7"], ["Study", "8"], ["Game", "9"],  ["Travel", "10"], ["Others", "11"]], class:"form-control" %>
               </div>
               <div class="form-group">
-                <%= f.label "Title", class: 'text-black' %>
+                <%= f.label t('hobbies.new.label'), class: 'text-black' %>
                 <%= f.text_field :title, class: 'form-control' %>
               </div>
               <div class="form-group">
-                <%= f.label "Impression/Thoughts", class: 'text-black' %>
+                <%= f.label t('hobbies.new.label2'), class: 'text-black' %>
                 <%= f.text_field :impression, class: 'form-control' %>
               </div>
-              <%= f.submit "Send", class:"btn btn-info" %>
+              <%= f.submit t('dictionary.button.send'), class:"btn btn-info" %>
             <% end %>
           </div>
         </div>

@@ -1,12 +1,12 @@
 <% provide(:title, 'Habit') %>
 
 <div class="habits-new-wrapper">
-  <div class="habits-container">
+  <div class="habits-container container">
     <div class="row">
       <div class="col-md-6 mx-auto">
         <h1><%= t('habits.index.title') %></h1>
-        <%= link_to "New daily habit", daily_habit_new_path, class: 'btn btn-info' %>
-        <%= link_to "New weekly habit", weekly_habit_new_path, class: 'btn btn-info' %>
+        <%= link_to t("habits.index.daily"), daily_habit_new_path, class: 'btn btn-info' %>
+        <%= link_to t("habits.index.weekly"), weekly_habit_new_path, class: 'btn btn-info' %>
         <hr>
     
       <div class='card'>

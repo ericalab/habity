@@ -11,6 +11,17 @@ en:
       register: "Your new daily habit!"
     new_weekly:
       register: "Your new weekly habit!"
+  hobbies: 
+    index:
+      title: "'s record."
+      button: "Make notes"
+      dropdown: "Your notes"
+    new:
+      title: "Make a note whatever you want!"
+      label: "Title"
+      label2: "Note"
+      
+      
 
   activerecord:                
     models:                     
@@ -40,6 +51,7 @@ en:
       email: "Email"
       password: "Password"
       password_confirmation: "Password Confirmation"
+      category: "Category"
       
     button:                      ## 表示するボタン
       create: "create"
@@ -47,5 +59,11 @@ en:
       clear: "clear"
       update: "update"
       destroy: "destroy"
-      cancel: "cancel"     
+      cancel: "cancel"   
+      send: "send"
+    
+    will_paginate:
+      previous_label: "previous"
+      next_label: "next"
+      page_gap: "…"
         

@@ -11,7 +11,16 @@ ja:
       register: "新しい習慣（毎日）!"
     new_weekly:
       register: "新しい習慣（毎週）!"
-
+  hobbies: 
+    index:
+      title: "の記録"
+      button: "メモする"
+      dropdown: "記録を見る"
+    new:
+      title: "なんでもメモしよう。"
+      label: "タイトル"
+      label2: "メモ"
+    
   activerecord:                 ## モデルの開始はactiverecord
     models:                     ## モデル
       User: "ユーザー"
@@ -45,6 +54,7 @@ ja:
       email: "メールアドレス"
       password: "パスワード"
       password_confirmation: "確認用パスワード"
+      category: "カテゴリー"
       
       
     button:                      ## 表示するボタン
@@ -54,3 +64,10 @@ ja:
       update: "更新"
       destroy: "削除"
       cancel: "キャンセル"
+      send: "送信"
+      
+
+    will_paginate:
+      previous_label: "前"
+      next_label: "次"
+      page_gap: "…"
