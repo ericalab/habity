@@ -67,7 +67,8 @@ ja:
       send: "送信"
       
 
-    will_paginate:
+  views:
+    pagination:
       previous_label: "前"
       next_label: "次"
       page_gap: "…"

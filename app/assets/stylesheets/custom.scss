@@ -186,7 +186,14 @@ h5{
   background-color: rgba(0,0,0,0.5);
   opacity: 0.9;
   a {
-    color: #fff !important;
+    color: #fff;
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+  .dropdown-menu a {
+    color: #000;
   }
 }
 
@@ -276,6 +283,15 @@ $gray-medium-light: #eaeaea;
   a {
     padding: 0;
   }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
 }
 
 .users.follow {

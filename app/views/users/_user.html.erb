@@ -1,7 +1,7 @@
 <li>
   <% @users.each do |user| %>
     <div class="card">
-      <h2 class="card-header"><%= user.name %></h2>
+      <h2 class="card-header"><%= gravatar_for user, size: 50 %><%= user.name %></h2>
       <div class="card-body">
         <h5 class="card-title">[Daily Habit]<h5>
         <% user.daily_habits.each do |daily_habit| %>

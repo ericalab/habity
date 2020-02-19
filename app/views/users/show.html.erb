@@ -4,51 +4,27 @@
 <div class="users-wrapper">
   <div class="users-container">
     <div class="row">
-      <aside class="col-md-4">
-        <section class="user_info">
-          <h1>
-            <%= @user.name %>
-          </h1>
-        </section>
+      <div class="col-md-8 mx-auto">
+        <div class='card border-info mb-3'>
+          <div class='card-header'><%= gravatar_for @user, size: 50 %><%= @user.name %></div>
+          <%= render 'follow_form' if logged_in? %>
         <section class="stats">
           <%= render 'shared/stats' %>
         </section>
-      </aside>
-      <div class="col-md-8 mx-auto">
-        <%= render 'follow_form' if logged_in? %>
-        <div class='card'>
-          <div class='card-header'>
-            <h1 class="text-center text-black">Daily_Habit</h1>
-          </div>
+        <div class='card-body'>
+          <h1 class="text-center text-black">Daily_Habit</h1>
           <% @user.daily_habits.each do |habit|  %>
-            <div class='card-body'>
               <label class="text-center text-black"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
-           </div>
           <% end %>
-         
-        </div>
-        
-        <div class='card'>
-          <div class='card-header'>
-            <h1 class="text-center text-black">Weekly_Habit</h1>
-          </div>  
+          <br><h1 class="text-center text-black">Weekly_Habit</h1>
           <% @user.weekly_habits.each do |habit|  %>  
-          <div class='card-body'>
             <label class="text-center text-black"><%= habit.name %>→Weekly Total:<%= habit.weekly_achievements.count %> </label>
-          </div>
+          <% end %>
+          <br><h1 class="text-center text-black">Hobby</h1>
+          <% @user.hobbies.each do |hobby|  %>
+            <label class="text-center text-black"><%= hobby.title %><%= hobby.impression %></label>
           <% end %>
         </div>
-        
-        <div class='card'>
-          <div class='card-header'>
-            <h1 class="text-center text-black">Hobby</h1>
-          </div>
-          <% @user.hobbies.each do |hobby|  %>
-          <div class='card-body'>
-            <label class="text-center text-black"><%= hobby.title %><%= hobby.impression %></label>
-          </div>
-          <% end %>
-          </div>
         </div>
       </div>
     </div>

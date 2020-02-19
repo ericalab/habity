@@ -10,7 +10,9 @@ User.create!(name:  "Example Momo",
              email: "momo@sample.com",
              password:              "momo12345",
              password_confirmation: "momo12345",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -19,9 +21,18 @@ User.create!(name:  "Example Momo",
   User.create!(name:  name,
                email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end
-               
+
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Lorem.sentence(1)
+  users.each { |user| user.daily_habit.create!(content: content) }
+  users.each { |user| user.weekly_habit.create!(content: content) }
+end
+
 #リレーションシップ
 users = User.all
 user  = users.first
