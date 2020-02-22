@@ -7,6 +7,15 @@
       <div class="col-md-8 mx-auto">
         <div class='card border-info mb-3'>
           <div class='card-header'><%= gravatar_for @user, size: 50 %><%= @user.name %></div>
+            <div class="btn-toolbar" role="toolbar" aria-label="ボタングループのツールバー">
+              <div class="btn-group mr-2" role="group" aria-label="1">
+                <%= link_to t("habits.index.daily"), daily_habit_new_path, class: 'btn btn-info' if @user == current_user%>
+              </div>
+              <div class="btn-group mr-2" role="group" aria-label="2">
+                <%= link_to t("habits.index.weekly"), weekly_habit_new_path, class: 'btn btn-info' if @user == current_user%>
+              </div>
+            </div>
+          </div>
           <%= render 'follow_form' if logged_in? %>
         <section class="stats">
           <%= render 'shared/stats' %>
