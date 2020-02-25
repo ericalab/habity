@@ -51,7 +51,9 @@ en:
       email: "Email"
       password: "Password"
       password_confirmation: "Password Confirmation"
+      forgot_password: "Forgot password"
       category: "Category"
+      
       
     button:                      ## 表示するボタン
       create: "create"

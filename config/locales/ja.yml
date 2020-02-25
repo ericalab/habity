@@ -54,6 +54,7 @@ ja:
       email: "メールアドレス"
       password: "パスワード"
       password_confirmation: "確認用パスワード"
+      forgot_password: "パスワードをお忘れの方"
       category: "カテゴリー"
       
       
