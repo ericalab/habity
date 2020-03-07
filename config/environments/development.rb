@@ -28,8 +28,12 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: '495cc78e9f3548b389f42d3bef432c38.vfs.cloud9.us-east-2.amazonaws.com', protocol: 'https' }
+  # config.action_mailer.delivery_method = :smtp
+  host = 'localhost:3001'  
+  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  config.action_mailer.delivery_method = :letter_opener_web
+
+  # config.action_mailer.default_url_options = { host: '495cc78e9f3548b389f42d3bef432c38.vfs.cloud9.us-east-2.amazonaws.com', protocol: 'https' }
   # config.action_mailer.smtp_settings = {
   # address:              'smtp.gmail.com',
   # port:                 587,

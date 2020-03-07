@@ -5,10 +5,13 @@
     <div class="row">
       <div class="col-md-6 mx-auto">
         <h1><%= t('habits.index.title') %></h1>
-        <%= link_to t("habits.index.daily"), daily_habit_new_path, class: 'btn btn-info' %>
-        <%= link_to t("habits.index.weekly"), weekly_habit_new_path, class: 'btn btn-info' %>
+        <h2><%= t('habits.index.explain') %></h2>
+        <%= link_to t("dictionary.button.daily"), daily_habit_new_path, class: 'btn btn-info' %>
+        <%= link_to t("dictionary.button.weekly"), weekly_habit_new_path, class: 'btn btn-info' %>
         <hr>
-    
+
+        <h2><%= t('habits.index.explain2') %></h2>
+
       <div class='card'>
         <div class='card-header'>
           <h2 class="text-center text-black"><%= t('habits.index.title_d') %></h2>
@@ -17,7 +20,7 @@
       <%= form_with(url: save_habit_path, local: false, id: "achievement_form") do |f| %>
         <% current_user.daily_habits.each_with_index do |habit, i|  %>
           <div class='card-body'>
-            <label class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= i %>]" value="<%= habit.id %>"><%= habit.name %>→Daily Total:<%= habit.daily_achievements.count %> </label>
+            <label class="text-center text-black"><input type="checkbox" name="achievement_daily[<%= i %>]" value="<%= habit.id %>"><%= habit.name %>→→<%= t('habits.index.total_d')%>:<%= habit.daily_achievements.count %> </label>
             <%= link_to "Delete", "/daily_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
           </div>
         <% end %>
@@ -28,7 +31,7 @@
           </div>  
           <% current_user.weekly_habits.each_with_index do |habit, j|  %>  
           <div class='card-body'>
-            <label class="text-center text-black"><input type="checkbox" name="achievement_weekly[<%= j %>]" value="<%= habit.id %>"><%= habit.name %>→Weekly Total:<%= habit.weekly_achievements.count %> </label>
+            <label class="text-center text-black"><input type="checkbox" name="achievement_weekly[<%= j %>]" value="<%= habit.id %>"><%= habit.name %>→→<%=t('habits.index.total_w')%>:<%= habit.weekly_achievements.count %> </label>
             <%= link_to "Delete", "/weekly_habit/#{habit.id}", method: :delete, data: {confirm: "習慣が削除されます。本当によろしいですか？"} %>
           </div>
           <% end %>

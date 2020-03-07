@@ -4,9 +4,13 @@ en:
       title: "Let's log what you did today!"
   habits:
     index:
+      explain: "Let's register what you would like to make it your new routines from the button below!"
+      explain2: "Put a check mark and click a cat button once it's done！"
       title: "Daily/Weekly Habit!"
       title_d: "Daily routine"
       title_w: "Weekly routine"
+      total_d: "Total(Day）"
+      total_w: "Total（Week）"
     new_daily:
       register: "Your new daily habit!"
     new_weekly:
@@ -21,8 +25,6 @@ en:
       label: "Title"
       label2: "Note"
       
-      
-
   activerecord:                
     models:                     
       User: "User"
@@ -63,6 +65,8 @@ en:
       destroy: "destroy"
       cancel: "cancel"   
       send: "send"
+      daily: "Daily"
+      weekly: "Weekly"
     
     will_paginate:
       previous_label: "previous"

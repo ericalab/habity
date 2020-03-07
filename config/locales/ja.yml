@@ -4,9 +4,14 @@ ja:
       title: "毎日の記録を残そう！"
   habits:
     index:
+      explain: "下のボタンから、毎日/毎週の習慣にしたいことを登録しよう！"
+      explain2: "達成したらチェックを入れて、猫ちゃんをクリック！"
       title: "毎日/毎週の習慣"
       title_d: "毎日やること"
       title_w: "毎週やること"
+      total_d: "合計（日）"
+      total_w: "合計（週）"
+
     new_daily:
       register: "新しい習慣（毎日）!"
     new_weekly:
@@ -66,6 +71,8 @@ ja:
       destroy: "削除"
       cancel: "キャンセル"
       send: "送信"
+      daily: "毎日"
+      weekly: "毎週"
       
 
   views:

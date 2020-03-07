@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.2.0'
 gem 'bootstrap'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'mysql2','>= 0.3.18', '< 0.5', group: :development
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -49,6 +49,7 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+  gem 'letter_opener_web'
 end
 
 group :development do
@@ -69,7 +70,7 @@ group :test do
 end
 
 group :production do
-  # gem 'pg'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
