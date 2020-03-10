@@ -50,6 +50,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
   gem 'letter_opener_web'
+  gem 'dotenv-rails'
 end
 
 group :development do
