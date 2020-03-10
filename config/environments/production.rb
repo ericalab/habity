@@ -87,8 +87,8 @@ Rails.application.configure do
 
 
   config.action_mailer.delivery_method = :smtp
-  host = 'localhost:3001'  
-  config.action_mailer.default_url_options = { host: host, protocol: 'http' }
+  host = 'protected-island-51505.herokuapp.com'  
+  config.action_mailer.default_url_options = { host: host, protocol: 'https' }
 
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
