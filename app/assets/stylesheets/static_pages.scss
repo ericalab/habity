@@ -1,3 +1,54 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.btn{
+    color: #1ea0b0!important;
+}
+
+.about-habity{
+    background-color: #e6f3f4;
+}
+
+@media screen and (max-width:760px) {
+    .jumbotron{
+        background-image: url('icons/bg-top-ps.jpeg');
+        height: 100vh;
+    }    
+    .title{
+        margin-top: 450px;
+    }
+
+    h1{
+        font-size: 35px!important;
+    }
+
+    h3, h4{
+        color: #1ea0b0;
+    }
+
+    h5{
+        font-size: 16px!important;
+    }
+}
+
+
+@media screen and (min-width:761px) {
+    .jumbotron{
+        background-image: url('icons/bg-top-pc.jpeg');
+        height: 95vh;
+    }    
+    .title{
+        margin-top: 500px;
+    }
+
+    h1{
+        font-size: 45px!important;
+    }
+
+    h3, h4{
+        color: #1ea0b0;
+    }
+
+    h5{
+        font-size: 16px!important;
+    }
+}

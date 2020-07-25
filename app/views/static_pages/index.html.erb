@@ -1,20 +1,39 @@
 <% provide(:title, "Home") %>
 
 <div class="top-hero-wrapper text-center">
-  <div class="container top-hero-container">
-    <h1 class="text-black">Habity</h1>
-    <h2 class="text-black"><%= t('static_pages.index.title') %></h2>
-    <div class="row">
-      <div class='col-md-8 mx-auto'>
-        <div class='row'>
-          <div class='col-md-6'>
-            <%= link_to t("dictionary.label.signup"), new_user_path, class: 'btn w-100 btn-white m-3' %>
-          </div>
-          <div class="col-md-6">
-             <%= link_to t("dictionary.label.login")  , login_path, class: 'btn w-100 btn-white m-3' %>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row title">
+        <div class="col-md-6 mx-auto">
+          <h1 class="text-black">Habity</h1>
+          <h2 class="text-black"><%= t('static_pages.index.title') %></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class='col-md-8 mx-auto'>
+          <div class='row'>
+            <div class='col-md-6'>
+              <%= link_to t("dictionary.label.signup"), new_user_path, class: 'btn w-100 btn-white m-3' %>
+            </div>
+            <div class="col-md-6">
+              <%= link_to t("dictionary.label.login")  , login_path, class: 'btn w-100 btn-white m-3' %>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mx-auto about-habity">
+      <h3>What's Habity?<h3>
+
+      <h4>継続したいこと、趣味を楽しく記録できるアプリ。</h4>
+      <h5>継続したいけど、なかなか続かない。</h5>
+      <h5>継続する記録アプリを開くことすら忘れてしまう。</h5>
+      <h4>そんな時に、Habityを使ってみよう！</h4>
+      <h4>毎日気軽に開くことができる。</h4>
+      <h4>継続したいことを登録して、</h4>
+      <h4>猫ちゃんをクリックするだけ。</h4>
     </div>
   </div>
 </div>
