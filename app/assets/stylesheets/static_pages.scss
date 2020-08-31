@@ -37,7 +37,7 @@
 @media screen and (min-width:761px) {
     .jumbotron{
         background-image: url('icons/bg-top-pc.jpeg');
-        background-color: none;
+        background-color: none!important;
         height: 95vh;
     }    
     .title{
