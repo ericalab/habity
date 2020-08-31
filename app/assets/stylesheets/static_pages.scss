@@ -8,15 +8,14 @@
     background-color: #e6f3f4;
 }
 
-.jumbotron {
-  background-color: none;
-}
 
 @media screen and (max-width:760px) {
     .jumbotron{
         background-image: url('icons/bg-top-ps.jpeg');
         height: 100vh;
+        background-color: none;
     }    
+
     .title{
         margin-top: 450px;
     }
@@ -38,6 +37,7 @@
 @media screen and (min-width:761px) {
     .jumbotron{
         background-image: url('icons/bg-top-pc.jpeg');
+        background-color: none;
         height: 95vh;
     }    
     .title{
