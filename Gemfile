@@ -7,7 +7,7 @@ gem 'bootstrap'
 # Use mysql as the database for Active Record
 gem 'mysql2','>= 0.3.18', '< 0.5', group: :development
 # Use Puma as the app server
-gem 'puma', ">= 3.12.6"
+gem 'puma', '~> 4.3', '>= 4.3.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
