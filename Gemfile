@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'ruby', '2.6.6'
 gem 'rails', '~> 5.2.0'
 gem 'bootstrap'
 # Use mysql as the database for Active Record
