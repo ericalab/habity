@@ -11,7 +11,7 @@
 
 @media screen and (max-width:760px) {
   .bg{
-      background-image: url('icons/bg-top-ps.jpeg');
+      background: image-url('icons/bg-top-ps.jpeg');
       background-position: center;
       height: 610px;
   } 
@@ -36,7 +36,7 @@
 
 @media screen and (min-width:761px) {
   .bg{
-      background-image: url('icons/bg-top-pc.jpeg');
+      background: image-url('icons/bg-top-pc.jpeg');
       height: 700px;
   }   
 
