@@ -1,6 +1,6 @@
 <% provide(:title, "Home") %>
 
-<div class="top-hero-wrapper text-center">
+<div class="main-area text-center">
   <div class="bg">
     <div class="title">
       <div class="row">
@@ -13,10 +13,10 @@
         <div class='col-md-8 mx-auto'>
           <div class='row'>
             <div class='col-md-6'>
-              <%= link_to t("dictionary.label.signup"), new_user_path, class: 'btn w-100 btn-white m-3' %>
+              <%= link_to t("dictionary.label.signup"), new_user_path, class: 'btn w-75 float-md-right btn-white m-3 ' %>
             </div>
             <div class="col-md-6">
-              <%= link_to t("dictionary.label.login")  , login_path, class: 'btn w-100 btn-white m-3' %>
+              <%= link_to t("dictionary.label.login")  , login_path, class: 'btn w-75 float-md-light btn-white m-3' %>
             </div>
           </div>
         </div>
