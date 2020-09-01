@@ -10,49 +10,49 @@
 
 
 @media screen and (max-width:760px) {
-    .jumbotron{
-        background-image: url('icons/bg-top-ps.jpeg');
-        height: 100vh;
-        background-color: none;
-    }    
+  .bg{
+      background-image: url('icons/bg-top-ps.jpeg');
+      background-position: center;
+      height: 610px;
+  } 
 
-    .title{
-        margin-top: 450px;
-    }
+  .title{
+      padding-top: 350px;
+  }
 
-    h1{
-        font-size: 35px!important;
-    }
+  h1{
+      font-size: 35px!important;
+  }
 
-    h3, h4{
-        color: #1ea0b0;
-    }
+  h3, h4{
+      color: #1ea0b0;
+  }
 
-    h5{
-        font-size: 16px!important;
-    }
+  h5{
+      font-size: 16px!important;
+  }
 }
 
 
 @media screen and (min-width:761px) {
-    .jumbotron{
-        background-image: url('icons/bg-top-pc.jpeg');
-        background-color: none!important;
-        height: 95vh;
-    }    
-    .title{
-        margin-top: 500px;
-    }
+  .bg{
+      background-image: url('icons/bg-top-pc.jpeg');
+      height: 95vh;
+  }   
 
-    h1{
-        font-size: 45px!important;
-    }
+  .title{
+      padding-top: 550px;
+  }
 
-    h3, h4{
-        color: #1ea0b0;
-    }
+  h1{
+      font-size: 45px!important;
+  }
 
-    h5{
-        font-size: 16px!important;
-    }
+  h3, h4{
+      color: #1ea0b0;
+  }
+
+  h5{
+      font-size: 16px!important;
+  }
 }
